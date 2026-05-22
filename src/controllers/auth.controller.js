@@ -26,7 +26,7 @@ export const signup = async (req, res) => {
     // Mock response (Next up we will connect a real database!)
     res.status(201).json({
       success: true,
-      message: "Account created successfully (Mocked)!",
+      message: "Account created successfully",
       userData: {
         email: email
       }
@@ -53,7 +53,7 @@ export const signin = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Sign-in successful (Mocked)!",
+      message: "Sign-in successful!",
       userData: { email }
     });
   } catch (error) {
@@ -68,7 +68,7 @@ export const logout = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Logged out successfully (Mocked)!"
+      message: "Logged out successfully"
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
