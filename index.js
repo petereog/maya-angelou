@@ -1,12 +1,12 @@
 import express from 'express';
-import helloRoute from './src/routers/hello.js';
+import authRoute from './src/routers/auth.router.js';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(helloRoute)
+app.use(authRoute);
 
 app.get('/', (req, res) => {
-  res.send('peter eniola ogungbe');
+  res.send('app Running');
 });
 
 app.listen(PORT, () => {
